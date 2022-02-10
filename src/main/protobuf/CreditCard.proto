@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package io.lenses.examples.serde.protobuf;
+
+option java_package = "com.example";
+option java_outer_classname = "CardData";
+
+message CreditCard {
+  string name = 1;
+  string country = 2;
+  string currency = 3;
+  string cardNumber = 4;
+  bool blocked = 5;
+  enum CardType {
+    VISA = 0;
+    MASTERCARD = 1;
+    AMEX = 2;
+  }
+  CardType type = 6;
+}
